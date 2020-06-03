@@ -1,0 +1,2 @@
+class NogoodsController < ApplicationController
+end

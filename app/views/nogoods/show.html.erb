@@ -1,0 +1,9 @@
+<div data-controller="nogood">
+  <h1>Downsides</h1>
+  <h3>StimulusReflex:</h3>
+  <input type="text" data-reflex="input->NogoodReflex#show">
+  <h4>-><%= @show %></h4>
+  <h3>Stimulus:</h3>
+  <input type="text" data-action="input->nogood#show" data-target="nogood.input">
+  <h4 data-target="nogood.output">-></h4>
+</div>
