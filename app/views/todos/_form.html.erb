@@ -1,0 +1,18 @@
+<%= form_with(model: todo, local: true) do |form| %>
+  <% if todo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+      <ul>
+        <% todo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div style="display: flex">
+    <%= form.label :title, 'Title:', style: "margin-right: 1rem" %>
+    <%= form.text_field :title, style: "margin-right: 1rem" %>
+    <%= form.submit %>
+  </div>
+<% end %>

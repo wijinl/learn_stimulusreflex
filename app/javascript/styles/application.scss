@@ -1,1 +1,9 @@
 @import "@exampledev/new.css/new.css";
+#chat {
+  padding: 0.4rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  background-color: #ededed;
+  display: flex;
+  justify-content: space-between;
+}

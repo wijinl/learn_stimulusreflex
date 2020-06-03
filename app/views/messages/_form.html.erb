@@ -1,0 +1,6 @@
+<%= form_with(model: message, local: true) do |form| %>
+  <div style="display: flex">
+    <%= form.text_field :content, style: "width: 100%" %>
+    <%= form.submit '📄Post', style: "width: 100px"%>
+  </div>
+<% end %>

@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Message Board(with CableReady)</h1>
+<%= render 'form', message: @message %>
+<div id="message">
+  <%= render partial: "message", collection: @messages %>
+</div>

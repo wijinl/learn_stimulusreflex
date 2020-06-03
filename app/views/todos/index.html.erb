@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Todos</h1>
+<%= render 'form', todo: @todo %>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Status</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td>
+          <%= check_box_tag nil, nil, todo.finish, data: {reflex: "click->TodoReflex#toggle", id: todo.id}%>
+        </td>
+        <td style="<%= todo.finish ? 'text-decoration: line-through' : '' %>">
+          <%= todo.title %>
+        </td>
+        <td><%= todo.finish ? '✅ Done' : '🔵 Ongoing' %></td>
+        <td><%= link_to '📝 Edit', edit_todo_path(todo) %></td>
+        <td><%= link_to '❌ Delete', todo, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
